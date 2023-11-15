@@ -64,6 +64,6 @@ class SettingsViewModel {
     ColorTheme("0xFF009688"),
     ColorTheme("0xFF2196F3"),
     ColorTheme("0xFF795548"),
-    ColorTheme("0xFFFFEA00"),
+   // ColorTheme("0xFFFFEA00"),
   ];
 }
