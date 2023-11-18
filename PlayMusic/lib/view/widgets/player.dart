@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:music_player/resources/size_manager.dart';
 import 'package:music_player/data/model/player/player.dart';
@@ -8,6 +7,7 @@ class PlayerView extends StatelessWidget {
   final void Function()? onNext;
   final void Function()? onPrevious;
   final void Function()? onExecute;
+  //final void Function()? onList;
   final void Function(double)? onChangeEnd;
   final void Function(double)? onChanged;
   final void Function(double)? onChangeStart;
@@ -21,6 +21,7 @@ class PlayerView extends StatelessWidget {
     required this.onChangeEnd,
     required this.onChanged,
     required this.onChangeStart,
+   // required this.onList,
   });
 
   @override
@@ -54,6 +55,10 @@ class PlayerView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.favorite_border_rounded),
+            ),
+            IconButton(
               onPressed: onPrevious,
               iconSize: AppSize.s28,
               icon: const Icon(Icons.skip_previous_rounded),
@@ -76,6 +81,12 @@ class PlayerView extends StatelessWidget {
               iconSize: AppSize.s28,
               icon: const Icon(Icons.skip_next_rounded),
             ),
+            IconButton(
+              icon: const Icon(Icons.playlist_play_outlined),
+              onPressed: () {
+                // Exibir o equalizador
+              },
+            )
           ],
         ),
       ],

@@ -12,7 +12,7 @@ class AudioChannel {
 
   Future pause() async {
     return await channel.invokeMethod(ChannelMethod.pauseSong);
-  }
+  } 
 
   Future getTrackTimerPosition() async {
     return await channel.invokeMethod(ChannelMethod.getCurrentTrackPosition);

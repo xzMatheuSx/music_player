@@ -8,7 +8,7 @@
 
 
     <application
-        android:label="music_"
+        android:label="FluMusic_"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
