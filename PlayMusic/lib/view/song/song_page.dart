@@ -43,12 +43,12 @@ class _SongPageState extends State<SongPage> {
               return PlayerView(
                 player: snapshot.data!,
                 onExecute: () => viewModel.togglePlayAndPauseCurrentAudio(),
-                //onNext: () => viewModel.nextAudio(),
+                onNext: () => viewModel.nextAudio(),
                 onPrevious: () => viewModel.previousAudio(),
                 onChanged: (value) =>
                     viewModel.setPositionAudioTime = value.toInt(),
                 onChangeEnd: (value) => viewModel.playOnNewAudioTimePosition(),
-                onChangeStart: (value) => viewModel.stopTimer(), onNext: () {  },
+                onChangeStart: (value) => viewModel.stopTimer(),
                 //onList: (value) => viewModel.() {
                   
               );

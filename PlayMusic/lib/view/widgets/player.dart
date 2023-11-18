@@ -21,7 +21,7 @@ class PlayerView extends StatelessWidget {
     required this.onChangeEnd,
     required this.onChanged,
     required this.onChangeStart,
-   // required this.onList,
+    // required this.onList,
   });
 
   @override
@@ -83,9 +83,7 @@ class PlayerView extends StatelessWidget {
             ),
             IconButton(
               icon: const Icon(Icons.playlist_play_outlined),
-              onPressed: () {
-                // Exibir o equalizador
-              },
+              onPressed: () {},
             )
           ],
         ),
