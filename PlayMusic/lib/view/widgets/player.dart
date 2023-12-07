@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_player/resources/size_manager.dart';
 import 'package:music_player/data/model/player/player.dart';
+import 'package:music_player/view/home/my_home_page.dart';
+import 'package:music_player/view/widgets/favorite.dart';
 
 class PlayerView extends StatelessWidget {
   final Player player;
@@ -55,7 +57,13 @@ class PlayerView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const FavoritesPage()),
+                );
+              },
               icon: const Icon(Icons.favorite_border_rounded),
             ),
             IconButton(
@@ -82,9 +90,13 @@ class PlayerView extends StatelessWidget {
               icon: const Icon(Icons.skip_next_rounded),
             ),
             IconButton(
-              icon: const Icon(Icons.playlist_play_outlined),
-              onPressed: () {},
-            )
+                icon: const Icon(Icons.playlist_play_outlined),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const MyHomePage()));
+                })
           ],
         ),
       ],
